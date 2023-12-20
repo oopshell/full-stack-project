@@ -10,18 +10,23 @@
         <h2>Shopping List</h2>
         <ol id="shopping_list_ol"></ol>
     </section>
-    <br>
     <section>
-        <div>
+        <h2>Functions</h2>
+        <p>
             <label for="new_item">Add a new item</label>
             <input type="text" name="new_item" id="new_item">
             <button type="submit" onclick="pushList();checkShoppingCart();">Add</button>
-        </div>
-        <br>
-        <div>
+        </p>
+        <p>
             <span id="delete_item">Delete the latest added item</span>
             <button type="button" onclick="popList();">Delete</button>
-        </div>
+        </p>
+        <p>
+            <label for="item_name">Find an item</label>
+            <input type="text" name="item_name" id="item_name">
+            <button type="submit" onclick="searchItem();">Search</button>
+            <span id="found"></span>
+        </p>
         <!-- <p id="shopping_list"></p> -->
         <p>
             <span>Updated list: </span>
@@ -30,6 +35,11 @@
     </section>
     <script>
         let shoppingList = ["牛奶", "鸡蛋", "面包"];
+        let item = {
+            name: "牛奶",
+            price: 12,
+            quantity: 1
+        };
         document.getElementById("shopping_list").innerHTML = JSON.stringify(shoppingList);
         let list = document.getElementById("shopping_list_ol");
         for (let i = 0; i < shoppingList.length; i++) {
@@ -50,6 +60,11 @@
             if (shoppingList.length > 5) {
                 console.log("你的购物车满了");
             }
+        }
+        function searchItem() {
+            let itemName = document.getElementById("item_name").value;
+            let found = shoppingList.includes(itemName) ? true : false;
+            document.getElementById("found").innerHTML = found;
         }
     </script>
 </body>
