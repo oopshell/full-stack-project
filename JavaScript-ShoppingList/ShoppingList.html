@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+<body>
+    <section>
+        <h2>Shopping List</h2>
+        <ol id="shopping_list_ol"></ol>
+    </section>
+    <br>
+    <section>
+        <div>
+            <label for="new_item">Add a new item</label>
+            <input type="text" name="new_item" id="new_item">
+            <button type="submit" onclick="pushList();checkShoppingCart();">Add</button>
+        </div>
+        <br>
+        <div>
+            <span id="delete_item">Delete the latest added item</span>
+            <button type="button" onclick="popList();">Delete</button>
+        </div>
+        <!-- <p id="shopping_list"></p> -->
+        <p>
+            <span>Updated list: </span>
+            <span id="shopping_list"></span>
+        </p>
+    </section>
+    <script>
+        let shoppingList = ["牛奶", "鸡蛋", "面包"];
+        document.getElementById("shopping_list").innerHTML = JSON.stringify(shoppingList);
+        let list = document.getElementById("shopping_list_ol");
+        for (let i = 0; i < shoppingList.length; i++) {
+            let li = document.createElement("li");
+            li.innerText = shoppingList[i];
+            list.appendChild(li);
+        }
+        function pushList() {
+            let item = document.getElementById("new_item").value;
+            shoppingList.push(item);
+            document.getElementById("shopping_list").innerHTML = JSON.stringify(shoppingList);
+        }
+        function popList() {
+            shoppingList.pop();
+            document.getElementById("shopping_list").innerHTML = JSON.stringify(shoppingList);
+        }
+        function checkShoppingCart() {
+            if (shoppingList.length > 5) {
+                console.log("你的购物车满了");
+            }
+        }
+    </script>
+</body>
+</html>
