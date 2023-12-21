@@ -2,73 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="A sample registration form">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Tiantian Li">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>Registration Form</title>
-    <style>
-    </style>
+    <!-- <style></style> -->
 </head>
 <body>
-    <form action="validate">
+    <h1>A Simple Form</h1>
+    <form action="./RegistrationForm.html">
         <fieldset>
             <legend>Basic Information</legend>
 
-            <label for="firstname">First Name</label>
-            <input class="textInput" type="text" name="first_name" id="firstname" autocomplete="off">
+            <label for="first_name">First Name</label>
+            <input class="textInput" type="text" name="first_name" id="first_name" autocomplete="off">
 
             <br>
-            <label for="lastname">Last Name</label>
-            <input class="textInput" type="text" name="last_name" id="lastname" autocomplete="off">
+            <label for="last_name">Last Name</label>
+            <input class="textInput" type="text" name="last_name" id="last_name" autocomplete="off">
             
             <br>
             <label for="email">Email</label>
-            <input class="textInput" type="email" name="user_email" id="email" autocomplete="off">
+            <input class="textInput" type="email" name="email" id="email" autocomplete="off">
         </fieldset>
 
         <fieldset>
             <legend>Password</legend>
 
             <label for="password">Password</label>
-            <input class="textInput" type="password" name="user_password" id="password">
+            <input class="textInput" type="password" name="password" id="password">
 
             <br>
             <label for="confirm">Confirm Password</label>
-            <input class="textInput" type="password" name="confirm_password" id="confirm">
+            <input class="textInput" type="password" name="confirm" id="confirm">
         </fieldset>
 
         <fieldset>
             <legend>More Details</legend>
 
             <label for="dob">Date of Birth</label><br>
-            <input type="date" name="date_of_birth" id="dob">
+            <input class="dateInput" type="date" name="date_of_birth" id="dob">
 
             <br>
             <label>Gender</label>
             <br>
-            <input type="radio" name="gender" id="gender_f" value="female">
+            <input class="radioInput" type="radio" name="gender" id="gender_f" value="female">
             <label for="gender_f">Female</label>
-            <input type="radio" name="gender" id="gender_m" value="male">
+            <input class="radioInput" type="radio" name="gender" id="gender_m" value="male">
             <label for="gender_m">Male</label>
-            <input type="radio" name="gender" id="gender_o" value="N/A">
+            <input class="radioInput" type="radio" name="gender" id="gender_o" value="N/A">
             <label for="gender_o">Other</label>
             <!-- different input with a same name, their values will be store in a same var -->
 
             <br>
-            <label for="about">About Me</label>
+            <label for="about_me">About Me</label>
             <br>
-            <textarea name="about_me" id="about" cols="30" rows="10"></textarea>
+            <textarea name="about_me" id="about_me" cols="30" rows="10"></textarea>
 
             <br>
             <label for="profession">Choose Your Profession</label>
-            <select name="user_profession" id="profession">
+            <select name="profession" id="profession">
                 <option value="Web Development">Web Development</option>
                 <option value="Data Analytics">Data Analytics</option>
                 <option value="UI/UX Design">UI/UX Design</option>
             </select>
         </fieldset>
 
-        <button type="reset">Clear Form</button>
-        <button type="submit">Submit</button>
-        
+        <div class="buttonDiv">
+            <button class="resetButton" type="reset">Clear Form</button>
+            <button class="submitButton" type="submit">Submit</button>
+        </div>
         
     </form>
 </body>
