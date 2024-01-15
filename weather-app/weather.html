@@ -11,6 +11,16 @@
         <h1>Weather Query App</h1>
         <form>
             <input type="text" placeholder="Enter city" id="city-input">
+            <!--
+                <input type="submit" value="Get weather">
+                vs
+                <button>Get weather</button>
+                Use <button> tag instead of <input type="button"..>. It is the advised practice in bootstrap 3.
+                The <input type="button" /> is just a button and won't do anything by itself. The <input type="submit" />, when inside a form element, will submit the form when clicked.
+                <input type='submit' /> doesn't support HTML inside of it, since it's a single self-closing tag. <button>, on the other hand, supports HTML, images, etc. inside because it's a tag pair: <button><img src='myimage.gif' /></button>. <button> is also more flexible when it comes to CSS styling.
+                The disadvantage of <button> is that it's not fully supported by older browsers. IE6/7, for example, don't display it correctly.
+                However, FIrefox and IE have quirks in which input[type="submit"] do not display correctly in some cases.
+            -->
             <button type="submit">Get weather</button>
         </form>
         <ul id="weather-data">
