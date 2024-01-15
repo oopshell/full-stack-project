@@ -1,0 +1,104 @@
+* {
+    // By default, the width and height of an element is calculated like this:
+    // width + padding + border = actual width of an element
+    // height + padding + border = actual height of an element
+    // This means: When you set the width/height of an element, the element often appears bigger than you have set (because the element's border and padding are added to the element's specified width/height).
+    
+    // setting input{width:100%} and button{width:100%} ends up with different sizes in browser
+    // use box-sizing to solve this problem:
+    box-sizing: border-box; // include the padding and border in an element's total width and height
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+};
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+    margin: 50px auto;
+    text-align: center;
+    max-width: 600px;
+    border-radius: 5px;
+    padding: 20px;
+    form {
+        font-size: 18px;
+        margin-bottom: 20px;
+        input[type="text"] {
+            background-color: rgb(242, 242, 242);
+            padding: 10px;
+            border: none;
+            outline: none; // the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.
+            width: 60%;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color: #0062cc;
+            }
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            &:hover {
+                background-color: #0062cc;
+            }
+        }
+    }
+    ul {
+        list-style: none;
+        .icon img {
+            width: 100px;
+            height: 100px;
+        }
+        .temperature {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .description {
+            font-size: 24px;
+        }
+        .details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            > div {
+                background-color: #f1f1f1;
+                border-radius: 5px;
+                text-align: center;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        form {
+            flex-direction: column;
+            input[type="text"] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            input[type="submit"] {
+                width: 100%;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
