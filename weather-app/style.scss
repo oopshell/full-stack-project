@@ -63,6 +63,8 @@ body {
     }
     ul {
         list-style: none;
+        margin: 0;
+        padding: 0;
         .icon img {
             width: 100px;
             height: 100px;
@@ -70,19 +72,29 @@ body {
         .temperature {
             font-size: 48px;
             font-weight: bold;
+            margin: 20px 0;
         }
         .description {
             font-size: 24px;
+            // background-color: #bbdcff;
+            // border-radius: 5px;
+            margin-bottom: 40px;
         }
         .details {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: stretch; // the boxes' size will be the same but texts aligned to the top
+            // align-items: center; // the boxes' size will be different but texts aligned to the center
             flex-wrap: wrap;
             > div {
+                font-size: 18px;
                 background-color: #f1f1f1;
                 border-radius: 5px;
                 text-align: center;
+                padding: 10px;
+                margin: 10px;
+                flex: 1; // This element will grow and take up 100% remaining space. If every element is set to 1, then they take up the remaining space equally.
+                // if use justify-content: space-between; align-items: stretch; the blocks' width are not equal
             }
         }
     }
