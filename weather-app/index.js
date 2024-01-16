@@ -15,13 +15,12 @@ const getWeatherData = async (city) => {
 
     
     // when need fetch data
-    // 可以用 async+await [写在try-catch里]
-    // 或者用 Promise .then .catch
+    // #option1# async+await [in try-catch structure]
+    // #option2# Promise .then .catch
 
     // when need query from http request
     // fetch vs axios
     // fetch is faster
-    // 有时候要指定用一种，两种写法都要背下来
     try {
         const response = await fetch(url);
         if(!response.ok) {
@@ -40,8 +39,7 @@ const getWeatherData = async (city) => {
 
 
         const icon = data.weather[0].icon;
-        weatherDataEl.querySelector(".icon").querySelector("img").src = `https://openweathermap.org/img/wn/${icon}.png`;
-        // weatherDataEl.querySelector(".icon").innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}.png" alt="weather icon"/>`;
+        weatherDataEl.querySelector(".icon").innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}.png" alt="weather icon"/>`;
 
 
         // 1.
