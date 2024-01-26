@@ -43,37 +43,37 @@ const getWeatherData = async (city) => {
 
 
         // 1. all in one div
-        // const details = [
-        //     `Feels like: ${Math.round(data.main.feels_like)}`,
-        //     `Humidity: ${data.main.humidity}%`,
-        //     `Wind speed: ${data.wind.speed} m/s`,
-        // ];
-        // weatherDataEl.querySelector(".details").innerHTML = details.map((d) => `<div>${d}</div>`).join("");
+        const details = [
+            `Feels like: ${Math.round(data.main.feels_like)}`,
+            `Humidity: ${data.main.humidity}%`,
+            `Wind speed: ${data.wind.speed} m/s`,
+        ];
+        weatherDataEl.querySelector(".details").innerHTML = details.map((d) => `<div>${d}</div>`).join("");
 
         // 2. separate title and value
-        const details = [
-            {
-                key: "Feels like",
-                val: Math.round(data.main.feels_like),
-                unit: "",
-            },
-            {
-                key: "Humidity",
-                val: data.main.humidity,
-                unit: "%",
-            },
-            {
-                key: "Wind speed",
-                val: data.wind.speed,
-                unit: " m/s",
-            },
-        ];
-        weatherDataEl.querySelector(".details").innerHTML = details.map((d) => {
-            const title = d.key;
-            const content = d.val;
-            const unit = d.unit;
-            return `<div><h4>${title}</h4><p>${content}${unit}</p></div>`;
-        }).join("");
+        // const details = [
+        //     {
+        //         key: "Feels like",
+        //         val: Math.round(data.main.feels_like),
+        //         unit: "",
+        //     },
+        //     {
+        //         key: "Humidity",
+        //         val: data.main.humidity,
+        //         unit: "%",
+        //     },
+        //     {
+        //         key: "Wind speed",
+        //         val: data.wind.speed,
+        //         unit: " m/s",
+        //     },
+        // ];
+        // weatherDataEl.querySelector(".details").innerHTML = details.map((d) => {
+        //     const title = d.key;
+        //     const content = d.val;
+        //     const unit = d.unit;
+        //     return `<div><h4>${title}</h4><p>${content}${unit}</p></div>`;
+        // }).join("");
 
 
     } catch (error) {
