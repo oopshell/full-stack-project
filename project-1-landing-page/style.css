@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 28px;
+}
+
+h6 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+span {
+  font-size: 16px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: #292e42;
+}
+header #header-icon {
+  flex: 1;
+}
+header #header-icon img {
+  height: 50px;
+}
+header ul {
+  list-style: none;
+  padding: 20px;
+}
+header ul li {
+  padding: 0 20px;
+  color: white;
+}
+header #log-in {
+  color: white;
+  text-decoration: none;
+  background-color: #d98c42;
+  padding: 10px 15px;
+  border-radius: 2px;
+  margin: 0 20px;
+}
+header .header-tool {
+  color: white;
+  margin: 0 20px;
+}
+
+.banner {
+  background-image: url("https://v.etsystatic.com/video/upload/q_auto/BG17025_olxkb7.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+.banner #banner-content {
+  margin: auto;
+  width: 85%;
+  max-width: 1180px;
+}
+.banner #banner-content #banner-practice-area {
+  color: white;
+}
+.banner #banner-content #banner-practice-area #practice-area-contact {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner #banner-content #banner-practice-area #practice-area-contact #button-practice-area {
+  color: white;
+  text-decoration: none;
+  background-color: #d98c42;
+  padding: 10px 15px;
+  border-radius: 2px;
+}
+.banner #banner-content #banner-practice-area #practice-area-contact #contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+}
+.banner #banner-content #banner-practice-area #practice-area-contact #contact i {
+  font-size: 30px;
+}
+.banner #banner-content #banner-practice-area #practice-area-contact #contact ul {
+  list-style: none;
+  margin-left: 10px;
+}
+.banner #banner-content #banner-find-lawyer {
+  box-sizing: border-box;
+  max-width: 300px;
+  padding: 20px 15px;
+  background-color: white;
+  position: relative;
+  top: 80px;
+  border: 1px solid #ccc;
+}
+.banner #banner-content #banner-find-lawyer p {
+  color: rgb(98, 98, 98);
+}
+.banner #banner-content #banner-find-lawyer form {
+  flex-wrap: wrap;
+}
+.banner #banner-content #banner-find-lawyer form input {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+}
+.banner #banner-content #banner-find-lawyer form input[type=text], .banner #banner-content #banner-find-lawyer form input[type=date] {
+  padding: 10px 10px;
+  background-color: #f2f2f2;
+  border-radius: 2px;
+}
+.banner #banner-content #banner-find-lawyer form input[type=submit] {
+  color: white;
+  text-decoration: none;
+  background-color: #d98c42;
+  padding: 10px 15px;
+  border-radius: 2px;
+  border: none;
+}
+
+.about {
+  width: 85%;
+  max-width: 1180px;
+  margin: 80px auto;
+}
+.about #lawyer-profile-photo {
+  width: 15vw;
+  height: 35vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .about-container {
+  max-width: 40%;
+}
+.about #about-attorney p:nth-child(1) {
+  color: #d98c42;
+}
+.about #about-attorney p:nth-child(3) {
+  color: rgb(98, 98, 98);
+}
+.about #name-signature {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about #name-signature ul {
+  list-style: none;
+  margin-right: 20px;
+}
+.about #name-signature ul li:nth-child(2) {
+  color: #d98c42;
+  font-size: 0.7em;
+}
+.about #confirmation {
+  margin-top: 20px;
+  background-color: #1d2330;
+  color: white;
+  padding: 20px 20px;
+}
+.about #confirmation #time {
+  margin-top: 15px;
+  font-weight: 80;
+  font-size: 13px;
+}
+.about #confirmation #date {
+  font-weight: 80;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+.about #confirmation #confirm {
+  color: white;
+  text-decoration: none;
+  background-color: #d98c42;
+  padding: 10px 15px;
+  border-radius: 2px;
+  padding: 8px 15px;
+  margin-right: 15px;
+}
+.about #confirmation #reschedule {
+  color: white;
+  text-decoration: none;
+  background-color: #d98c42;
+  padding: 10px 15px;
+  border-radius: 2px;
+  padding: 8px 15px;
+  color: black;
+  background-color: white;
+}
+
+.data {
+  background-color: #292e42;
+  color: white;
+}
+.data .data-container {
+  max-width: 70%;
+  margin: auto;
+  padding: 50px;
+}
+.data .data-container .data-item {
+  text-align: center;
+}
+.data .data-container .data-item img {
+  width: 60px;
+}
+
+.solution {
+  margin-top: 30px;
+  padding: 0 10%;
+}
+.solution #solution-title {
+  margin: auto;
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+}
+.solution #solution-title p:first-child {
+  color: #d98c42;
+}
+.solution ul {
+  list-style: none;
+  max-width: 900px;
+  margin: auto;
+}
+.solution ul li {
+  flex: 1;
+  text-align: center;
+  padding: 20px 0;
+}
+.solution ul li i {
+  font-size: 28px;
+}
+.solution ul li p:nth-child(3) {
+  font-size: 12px;
+}
+.solution ul li:nth-child(even) {
+  background-color: rgb(240, 240, 240);
+}
+.solution ul li:nth-child(odd) {
+  background-color: rgb(230, 230, 230);
+}
+.solution ul li:first-child {
+  background-color: #292e42;
+  color: white;
+}
+.solution ul li:first-child i {
+  color: #d98c42;
+}/*# sourceMappingURL=style.css.map */
