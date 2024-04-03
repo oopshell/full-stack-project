@@ -1,8 +1,15 @@
+const getLogger = require('../common/logger');
+const logger = getLogger(__filename);
+
 const getAllStudents = (req, res) => {
-    res.send("Read");
+    logger.info('Find all students');
+    // res.send("Read");
+    res.formatResponse([]);
+    // throw new Error('unknown error test');
 };
 
 const addStudent = (req, res) => {
+    logger.info('Add students');
     res.send("create");
 };
 
