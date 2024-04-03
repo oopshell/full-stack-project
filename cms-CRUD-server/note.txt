@@ -1,0 +1,32 @@
+
+// Necessary packages:
+// helmet, morgan, winston, rate-limit, swagger
+
+// controllers can be separated into controllers and services
+
+// put vs. patch
+// put: Updates an existing data record as a whole (replace it). Creates it if it does not exist.
+// patch: Partially updates an existing data record. Does not create a new record if not exist.
+
+// "null == null" is true, "undefined == null" is also true
+
+// npm i helmet winston morgan dotenv
+
+// && AND operator with non-Boolean values:
+// 1 && 2 = 2
+// 0 && 2 = 0
+// the first falsy value will be returned --- meaning
+// if the first value is false, returns the first value;
+// if the first value is true, returns the second value.
+
+What is helmet in NPM?
+Helmet.js is an open source JavaScript library that helps you secure your Node.js application by setting several HTTP headers. 
+It acts as a middleware for Express and similar technologies, automatically adding or removing HTTP headers to comply with web security standards.
+
+What is cors in node.js?
+CORS or Cross-Origin Resource Sharing in Node.js is a mechanism 
+by which a front-end client can make requests for resources to an external back-end server. 
+The single-origin policy does not allow cross-origin requests and CORS headers are required to bypass this feature.
+// when the front-end and back-end are separated, cors is required to allow the front-end get access to the back-end
+
+Mongoose is a MongoDB ODM i.e (Object database Modelling) that used to translate the code and its representation from MongoDB to the Node.js server.
